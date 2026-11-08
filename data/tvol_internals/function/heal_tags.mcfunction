@@ -5,3 +5,5 @@ tag @e[tag=tvol.box.entity, tag=!tvol.box] add tvol.box
 tag @e[tag=tvol.box.entity, tag=tvol.box.player] remove tvol.box.player
 
 tag @e[tag=tvol.box, tag=!tvol] add tvol
+
+tag @e[tag=tvol.temp, tag=!tvol] add tvol
