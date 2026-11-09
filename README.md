@@ -38,7 +38,7 @@ Defaults to `type=!#tvol:ignored`, which excludes markers, armor stands, item di
 
 ### Callbacks (optional)
 
-You may specify any number of callbacks. Use the event name as a key and a compound tag with a function and/or command to run specified.
+You may specify any number of callbacks. Use the event name as a key and a compound tag with a function and/or command to run specified. Both will run as the entity that entered/exited/etc. at the base position of the volume. Functions will be run with argument id set to the volume's id.
 
 Example: `on_enter:{command:"say hi",function:"my_datapack:area_entered"},on_exit:{command:"say bye"},on_stay:{function:"my_datapack:area_stay"}`
 
