@@ -1,6 +1,6 @@
-#Input Marcos: id, dx, dy, dz, on_enter_command, on_enter_function, on_stay_command, on_stay_function, on_exit_command, on_exit_function
+#Input Marcos: id, dx, dy, dz, condition, on_enter_command, on_enter_function, on_stay_command, on_stay_function, on_exit_command, on_exit_function
 
-$tag @a[dx=$(dx), dy=$(dy), dz=$(dz)] add tvol.evaluate.$(id)
+$tag @a[dx=$(dx), dy=$(dy), dz=$(dz), $(condition)] add tvol.evaluate.$(id)
 
 #On Stay
 $execute as @a[tag=tvol.evaluate.$(id), tag=tvol.inside.$(id)] run function tvol_internals:volume/stay {id: $(id), callback_command: "$(on_stay_command)", callback_function: "$(on_stay_function)"}

@@ -5,6 +5,8 @@ execute unless data entity @s data.tvol.dx run data modify entity @s data.tvol.d
 execute unless data entity @s data.tvol.dy run data modify entity @s data.tvol.dy set value 2
 execute unless data entity @s data.tvol.dz run data modify entity @s data.tvol.dz set value 3
 
+execute unless data entity @s data.tvol.condition run data modify entity @s data.tvol.condition set value "type=!#tvol:ignored"
+
 execute unless data entity @s data.tvol.on_enter.command run data modify entity @s data.tvol.on_enter.command set value "function tvol_internals:discard"
 execute unless data entity @s data.tvol.on_enter.function run data modify entity @s data.tvol.on_enter.function set value "tvol_internals:discard"
 execute unless data entity @s data.tvol.on_stay.command run data modify entity @s data.tvol.on_stay.command set value "function tvol_internals:discard"
