@@ -65,51 +65,51 @@ scoreboard players add #zmax tvol.outline 1
 
 #Build outline data in storage
 
-data modify storage tvol:temp outline_data set value {duration_x: 0, duration_y: 0, duration_z: 0, c0_x: 0, c0_y: 0, c0_z: 0, c1_x: 0, c1_y: 0, c1_z: 0, c2_x: 0, c2_y: 0, c2_z: 0, c3_x: 0, c3_y: 0, c3_z: 0, c4_x: 0, c4_y: 0, c4_z: 0, c5_x: 0, c5_y: 0, c5_z: 0, c6_x: 0, c6_y: 0, c6_z: 0, c7_x: 0, c7_y: 0, c7_z: 0}
+data modify storage tvol:temp outline set value {duration_x: 0, duration_y: 0, duration_z: 0, c0_x: 0, c0_y: 0, c0_z: 0, c1_x: 0, c1_y: 0, c1_z: 0, c2_x: 0, c2_y: 0, c2_z: 0, c3_x: 0, c3_y: 0, c3_z: 0, c4_x: 0, c4_y: 0, c4_z: 0, c5_x: 0, c5_y: 0, c5_z: 0, c6_x: 0, c6_y: 0, c6_z: 0, c7_x: 0, c7_y: 0, c7_z: 0}
 
 #Durations
-execute store result storage tvol:temp outline_data.duration_x int 0.01 run scoreboard players get #duration_x tvol.outline
-execute store result storage tvol:temp outline_data.duration_y int 0.01 run scoreboard players get #duration_y tvol.outline
-execute store result storage tvol:temp outline_data.duration_z int 0.01 run scoreboard players get #duration_z tvol.outline
+execute store result storage tvol:temp outline.duration_x int 0.01 run scoreboard players get #duration_x tvol.outline
+execute store result storage tvol:temp outline.duration_y int 0.01 run scoreboard players get #duration_y tvol.outline
+execute store result storage tvol:temp outline.duration_z int 0.01 run scoreboard players get #duration_z tvol.outline
 
 #c0 min corner (min, min, min)
-execute store result storage tvol:temp outline_data.c0_x double 0.01 run scoreboard players get #x tvol.outline
-execute store result storage tvol:temp outline_data.c0_y double 0.01 run scoreboard players get #y tvol.outline
-execute store result storage tvol:temp outline_data.c0_z double 0.01 run scoreboard players get #z tvol.outline
+execute store result storage tvol:temp outline.c0_x double 0.01 run scoreboard players get #x tvol.outline
+execute store result storage tvol:temp outline.c0_y double 0.01 run scoreboard players get #y tvol.outline
+execute store result storage tvol:temp outline.c0_z double 0.01 run scoreboard players get #z tvol.outline
 
 #c1 (max, min, min)
-execute store result storage tvol:temp outline_data.c1_x double 0.01 run scoreboard players get #xmax tvol.outline
-execute store result storage tvol:temp outline_data.c1_y double 0.01 run scoreboard players get #y tvol.outline
-execute store result storage tvol:temp outline_data.c1_z double 0.01 run scoreboard players get #z tvol.outline
+execute store result storage tvol:temp outline.c1_x double 0.01 run scoreboard players get #xmax tvol.outline
+execute store result storage tvol:temp outline.c1_y double 0.01 run scoreboard players get #y tvol.outline
+execute store result storage tvol:temp outline.c1_z double 0.01 run scoreboard players get #z tvol.outline
 
 #c2 (min, min, max)
-execute store result storage tvol:temp outline_data.c2_x double 0.01 run scoreboard players get #x tvol.outline
-execute store result storage tvol:temp outline_data.c2_y double 0.01 run scoreboard players get #y tvol.outline
-execute store result storage tvol:temp outline_data.c2_z double 0.01 run scoreboard players get #zmax tvol.outline
+execute store result storage tvol:temp outline.c2_x double 0.01 run scoreboard players get #x tvol.outline
+execute store result storage tvol:temp outline.c2_y double 0.01 run scoreboard players get #y tvol.outline
+execute store result storage tvol:temp outline.c2_z double 0.01 run scoreboard players get #zmax tvol.outline
 
 #c3 (max, min, max)
-execute store result storage tvol:temp outline_data.c3_x double 0.01 run scoreboard players get #xmax tvol.outline
-execute store result storage tvol:temp outline_data.c3_y double 0.01 run scoreboard players get #y tvol.outline
-execute store result storage tvol:temp outline_data.c3_z double 0.01 run scoreboard players get #zmax tvol.outline
+execute store result storage tvol:temp outline.c3_x double 0.01 run scoreboard players get #xmax tvol.outline
+execute store result storage tvol:temp outline.c3_y double 0.01 run scoreboard players get #y tvol.outline
+execute store result storage tvol:temp outline.c3_z double 0.01 run scoreboard players get #zmax tvol.outline
 
 #c4 (min, max, min)
-execute store result storage tvol:temp outline_data.c4_x double 0.01 run scoreboard players get #x tvol.outline
-execute store result storage tvol:temp outline_data.c4_y double 0.01 run scoreboard players get #ymax tvol.outline
-execute store result storage tvol:temp outline_data.c4_z double 0.01 run scoreboard players get #z tvol.outline
+execute store result storage tvol:temp outline.c4_x double 0.01 run scoreboard players get #x tvol.outline
+execute store result storage tvol:temp outline.c4_y double 0.01 run scoreboard players get #ymax tvol.outline
+execute store result storage tvol:temp outline.c4_z double 0.01 run scoreboard players get #z tvol.outline
 
 #c5 (max, max, min)
-execute store result storage tvol:temp outline_data.c5_x double 0.01 run scoreboard players get #xmax tvol.outline
-execute store result storage tvol:temp outline_data.c5_y double 0.01 run scoreboard players get #ymax tvol.outline
-execute store result storage tvol:temp outline_data.c5_z double 0.01 run scoreboard players get #z tvol.outline
+execute store result storage tvol:temp outline.c5_x double 0.01 run scoreboard players get #xmax tvol.outline
+execute store result storage tvol:temp outline.c5_y double 0.01 run scoreboard players get #ymax tvol.outline
+execute store result storage tvol:temp outline.c5_z double 0.01 run scoreboard players get #z tvol.outline
 
 #c6 (min, max, max)
-execute store result storage tvol:temp outline_data.c6_x double 0.01 run scoreboard players get #x tvol.outline
-execute store result storage tvol:temp outline_data.c6_y double 0.01 run scoreboard players get #ymax tvol.outline
-execute store result storage tvol:temp outline_data.c6_z double 0.01 run scoreboard players get #zmax tvol.outline
+execute store result storage tvol:temp outline.c6_x double 0.01 run scoreboard players get #x tvol.outline
+execute store result storage tvol:temp outline.c6_y double 0.01 run scoreboard players get #ymax tvol.outline
+execute store result storage tvol:temp outline.c6_z double 0.01 run scoreboard players get #zmax tvol.outline
 
 #c7 (max, max, max)
-execute store result storage tvol:temp outline_data.c7_x double 0.01 run scoreboard players get #xmax tvol.outline
-execute store result storage tvol:temp outline_data.c7_y double 0.01 run scoreboard players get #ymax tvol.outline
-execute store result storage tvol:temp outline_data.c7_z double 0.01 run scoreboard players get #zmax tvol.outline
+execute store result storage tvol:temp outline.c7_x double 0.01 run scoreboard players get #xmax tvol.outline
+execute store result storage tvol:temp outline.c7_y double 0.01 run scoreboard players get #ymax tvol.outline
+execute store result storage tvol:temp outline.c7_z double 0.01 run scoreboard players get #zmax tvol.outline
 
-function tvol_internals:volume/box/outline/render with storage tvol:temp outline_data
+function tvol_internals:volume/box/outline/render with storage tvol:temp outline
