@@ -12,14 +12,14 @@ scoreboard players set #min_size tvol.temp 400
 scoreboard players set #speed tvol.temp 10
 
 #Extract config
-data modify storage tvol:temp outline_data.center_x set from entity @s Pos[0]
-data modify storage tvol:temp outline_data.center_y set from entity @s Pos[1]
-data modify storage tvol:temp outline_data.center_z set from entity @s Pos[2]
+data modify storage tvol:temp outline.center_x set from entity @s Pos[0]
+data modify storage tvol:temp outline.center_y set from entity @s Pos[1]
+data modify storage tvol:temp outline.center_z set from entity @s Pos[2]
 
-execute store result storage tvol:temp outline_data.radius double 1 run data get entity @s data.tvol.radius
+data modify storage tvol:temp outline.radius set from entity @s data.tvol.radius
 
 #Calculate particle size
-execute store result score #size tvol.outline run data get storage tvol:temp outline_data.radius 40
+execute store result score #size tvol.outline run data get storage tvol:temp outline.radius 40
 
 scoreboard players operation #size tvol.outline += #min_size tvol.temp
 execute if score #size tvol.outline matches 4000.. run scoreboard players set #size tvol.outline 4000
@@ -62,16 +62,16 @@ scoreboard players operation #angle7 tvol.outline %= #360 tvol.outline
 #Build outline data in storage
 
 #Size
-execute store result storage tvol:temp outline_data.size double 0.001 run scoreboard players get #size tvol.outline
+execute store result storage tvol:temp outline.size double 0.001 run scoreboard players get #size tvol.outline
 
 #Angles
-execute store result storage tvol:temp outline_data.angle0 int 1 run scoreboard players get #angle0 tvol.outline
-execute store result storage tvol:temp outline_data.angle1 int 1 run scoreboard players get #angle1 tvol.outline
-execute store result storage tvol:temp outline_data.angle2 int 1 run scoreboard players get #angle2 tvol.outline
-execute store result storage tvol:temp outline_data.angle3 int 1 run scoreboard players get #angle3 tvol.outline
-execute store result storage tvol:temp outline_data.angle4 int 1 run scoreboard players get #angle4 tvol.outline
-execute store result storage tvol:temp outline_data.angle5 int 1 run scoreboard players get #angle5 tvol.outline
-execute store result storage tvol:temp outline_data.angle6 int 1 run scoreboard players get #angle6 tvol.outline
-execute store result storage tvol:temp outline_data.angle7 int 1 run scoreboard players get #angle7 tvol.outline
+execute store result storage tvol:temp outline.angle0 int 1 run scoreboard players get #angle0 tvol.outline
+execute store result storage tvol:temp outline.angle1 int 1 run scoreboard players get #angle1 tvol.outline
+execute store result storage tvol:temp outline.angle2 int 1 run scoreboard players get #angle2 tvol.outline
+execute store result storage tvol:temp outline.angle3 int 1 run scoreboard players get #angle3 tvol.outline
+execute store result storage tvol:temp outline.angle4 int 1 run scoreboard players get #angle4 tvol.outline
+execute store result storage tvol:temp outline.angle5 int 1 run scoreboard players get #angle5 tvol.outline
+execute store result storage tvol:temp outline.angle6 int 1 run scoreboard players get #angle6 tvol.outline
+execute store result storage tvol:temp outline.angle7 int 1 run scoreboard players get #angle7 tvol.outline
 
-function tvol_internals:volume/sphere/outline/render with storage tvol:temp outline_data
+function tvol_internals:volume/sphere/outline/render with storage tvol:temp outline
