@@ -8,7 +8,7 @@ scoreboard players set #225 tvol.temp 225
 scoreboard players set #270 tvol.temp 270
 scoreboard players set #315 tvol.temp 315
 
-scoreboard players set #min_size tvol.temp 400
+scoreboard players set #min_size tvol.temp 100
 scoreboard players set #speed tvol.temp 10
 
 #Extract config
@@ -19,7 +19,7 @@ data modify storage tvol:temp outline.center_z set from entity @s Pos[2]
 data modify storage tvol:temp outline.radius set from entity @s data.tvol.radius
 
 #Calculate particle size
-execute store result score #size tvol.outline run data get storage tvol:temp outline.radius 40
+execute store result score #size tvol.outline run data get storage tvol:temp outline.radius 200
 
 scoreboard players operation #size tvol.outline += #min_size tvol.temp
 execute if score #size tvol.outline matches 4000.. run scoreboard players set #size tvol.outline 4000
