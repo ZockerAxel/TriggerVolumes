@@ -23,7 +23,7 @@ You can toggle visual outlines with
 - `sphere`: Sphere Volume
   - Size Arg: `radius`: The sphere's radius. Only positive values allowed.
 - `box`: Box Volume (full blocks only)
-  - Size Args: `dx`, `dy` and `dz`: Describe size in x, y and z directions, these are fed directly into a target selector dx, dy and dz respectively and can be negative.
+  - Size Args: `dx`, `dy` and `dz`: Describe size in x, y and z directions, these are fed directly into a target selector dx, dy and dz respectively and can be negative. Thus, they are technically off-by-one as setting them to 0, 0, 0 will create a 1x1x1 block detection.
 
 ### Target Types
 
