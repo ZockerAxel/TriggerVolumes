@@ -3,13 +3,13 @@
 $tag @e[distance=..$(radius)] add tvol.evaluate.$(id)
 
 #On Stay
-$execute as @e[tag=tvol.evaluate.$(id), tag=tvol.inside.$(id)] at @s run function tvol_internals:volume/stay {id: $(id), callback: "$(on_stay)"}
+$execute as @e[tag=tvol.evaluate.$(id), tag=tvol.inside.$(id)] run function tvol_internals:volume/stay {id: $(id), callback: "$(on_stay)"}
 
 #On Enter
-$execute as @e[tag=tvol.evaluate.$(id), tag=!tvol.inside.$(id)] at @s run function tvol_internals:volume/enter {id: $(id), callback: "$(on_enter)"}
+$execute as @e[tag=tvol.evaluate.$(id), tag=!tvol.inside.$(id)] run function tvol_internals:volume/enter {id: $(id), callback: "$(on_enter)"}
 
 #On Exit
-$execute as @e[tag=tvol.inside.$(id), tag=!tvol.evaluate.$(id)] at @s run function tvol_internals:volume/exit {id: $(id), callback: "$(on_exit)"}
+$execute as @e[tag=tvol.inside.$(id), tag=!tvol.evaluate.$(id)] run function tvol_internals:volume/exit {id: $(id), callback: "$(on_exit)"}
 
 #Cleanup
 $tag @e[tag=tvol.evaluate.$(id)] remove tvol.evaluate.$(id)
