@@ -1,3 +1,4 @@
-#Input Marco: id, callback
+#Input Marco: id, callback_command, callback_function
 
-$$(callback)
+$$(callback_command)
+$function $(callback_function) {id: $(id)}

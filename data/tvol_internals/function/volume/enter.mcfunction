@@ -1,4 +1,5 @@
-#Input Marco: id, callback
+#Input Marco: id, callback_command, callback_function
 
 $tag @s add tvol.inside.$(id)
-$$(callback)
+$$(callback_command)
+$function $(callback_function) {id: $(id)}
